@@ -7,7 +7,7 @@ export default function BookDataTable(props:any) {
     if(bookData) {
         return (
             
-<div className="flex gap-8 p-8 bg-white text-black">
+<div className="flex lg:flex-row flex-col gap-8 p-8 bg-white text-black">
   <div className="flex-shrink-0">
     <img
       src={bookData.image_url}
