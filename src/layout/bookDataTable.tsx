@@ -1,6 +1,11 @@
 import BookData from "../types/bookData.ts";
+import {AxiosResponse} from "axios";
 
-export default function BookDataTable(props:any) {
+interface BookDataTable {
+    bookData? : BookData;
+};
+
+export default function BookDataTable(props: BookDataTable) {
 
     let bookData = props.bookData;
 

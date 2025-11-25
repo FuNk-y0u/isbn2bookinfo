@@ -64,7 +64,6 @@ export default function Home() {
                     placeholder={"example: 9780679733737"}
                     className={`p-3 border-2`}
                     defaultValue={inputISBN}
-
                     autoFocus
                 />
 

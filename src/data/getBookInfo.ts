@@ -1,9 +1,12 @@
 import axios from "axios";
 
 import BookData from "../types/bookData.ts";
+
+import {AxiosResponse} from "axios";
+
 const endPointUrl: string = process.env.NEXT_PUBLIC_BIEP ?? "";
 
-export default async function getBookInfo(isbn: string, setIsLoading: Function): Promise<any> {
+export default async function getBookInfo(isbn: string, setIsLoading: Function): Promise<AxiosResponse<any>> {
 
     // Setting the indicator for loading
    setIsLoading(true); 

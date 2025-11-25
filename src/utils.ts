@@ -18,14 +18,9 @@ export function convertJson2BookData(json_data: Record<any, any>): BookData{
     };
 }
 
-export function validateInputISBN13(input_data: string): any {
+export function validateInputISBN13(input_data: string): void {
     let input_valid = inputValidationRegex.test(input_data.trim());
-    console.log(input_valid)
-    console.log(inputValidationRegex);
-    if(input_valid) {
-        // do nothing
-    }
-    else {
+    if(!input_valid) {
         throw new Error("Invalid ISBN13 Book number");
     }
 };
