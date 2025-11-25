@@ -55,7 +55,7 @@ export default function Home() {
                 <input
                     type="text"
                     onChange={handleChange}
-                    placeholder={"example: 12345566"}
+                    placeholder={"example: 9780679733737"}
                     className={`p-3 border-2`}
                     defaultValue={inputISBN}
 
