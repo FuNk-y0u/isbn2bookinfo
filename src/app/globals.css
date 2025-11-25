@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: 'iosevka';
+    src: url('/font/IsoevkaNerdFont-Regular.ttf') format('ttf');
+    font-weight: normal;
+    font-size: normal;
+    font-display: normal;
+}
+
+* {
+    font-family: 'iosevka';
+}

@@ -1,0 +1,11 @@
+import {SyncLoader} from 'react-spinners';
+
+export default function LoadingSpinner(props) {
+    if(props.isLoading) {
+
+        return (
+            <p className="flex flex-col items-center justify-center gap-5"> Fetching Data <SyncLoader color="#000000" /> </p>
+        );
+    }
+    return "";
+};
