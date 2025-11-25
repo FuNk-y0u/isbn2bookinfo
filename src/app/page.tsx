@@ -28,8 +28,14 @@ export default function Home() {
             validateInputISBN13(inputISBN);
 
             let res = await getBookInfo(inputISBN, setIsLoading);
-
-            let book_info = res.data.items[0] ?? {};
+            
+            var book_info;
+            if(res.data.items) {
+                var book_info = res.data.items[0];
+            }
+            else{
+                throw new Error("Sorry couldn't find a book with this id");
+            }
 
             const book_data: BookData = convertJson2BookData(book_info);
             setBookData(book_data);
