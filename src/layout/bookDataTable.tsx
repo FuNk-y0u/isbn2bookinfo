@@ -1,6 +1,6 @@
 import BookData from "../types/bookData.ts";
 
-export default function BookDataTable(props) {
+export default function BookDataTable(props:any) {
 
     let bookData = props.bookData;
 
@@ -29,7 +29,7 @@ export default function BookDataTable(props) {
         AUTHORS
       </h1>
       <div className="space-y-1">
-        {bookData.authors.map((data) => (
+        {bookData.authors.map((data:any) => (
           <h2 key={data} className="text-lg">
             {data}
           </h2>
@@ -42,7 +42,7 @@ export default function BookDataTable(props) {
         CATEGORIES
       </h1>
       <div className="flex flex-wrap gap-2">
-        {bookData.categories.map((data) => (
+        {bookData.categories.map((data:any) => (
           <span
             key={data}
             className="px-3 py-1 bg-black text-white text-sm font-semibold"

@@ -1,8 +1,8 @@
 import BookData from "./types/bookData.ts";
 
-const inputValidationRegex:RegExp = new RegExp(process.env.NEXT_PUBLIC_BIREX!);
+const inputValidationRegex:RegExp = new RegExp(process.env.NEXT_PUBLIC_BIREX ?? "");
 
-export function convertJson2BookData(json_data: Record<string, string>): BookData{
+export function convertJson2BookData(json_data: Record<any, any>): BookData{
     const info = json_data.volumeInfo ?? {};
 
     return {
@@ -18,7 +18,7 @@ export function convertJson2BookData(json_data: Record<string, string>): BookDat
     };
 }
 
-export function validateInputISBN13(input_data: string): None {
+export function validateInputISBN13(input_data: string): any {
     let input_valid = inputValidationRegex.test(input_data.trim());
     console.log(input_valid)
     console.log(inputValidationRegex);

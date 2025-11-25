@@ -1,6 +1,6 @@
 import {SyncLoader} from 'react-spinners';
 
-export default function LoadingSpinner(props) {
+export default function LoadingSpinner(props: any) {
     if(props.isLoading) {
 
         return (

@@ -8,14 +8,16 @@ import getBookInfo from "../data/getBookInfo.ts";
 import BookDataTable from "../layout/bookDataTable.tsx";
 import LoadingSpinner from "../layout/loadingSpinner.tsx";
 
+import BookData from "../types/bookData.ts";
+
 export default function Home() {
 
     const [inputISBN, setInputISBN] = useState<string>("");
     const [isLoading, setIsLoading] = useState<boolean>(false);
-    const [bookData, setBookData] = useState();
+    const [bookData, setBookData] = useState<BookData>();
     const [errorMsg, setErrorMsg] = useState<string>("");
 
-    const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setInputISBN(e.target.value);
     };
 
@@ -32,7 +34,7 @@ export default function Home() {
             const book_data: BookData = convertJson2BookData(book_info);
             setBookData(book_data);
         }
-        catch(err) {
+        catch(err: any) {
             console.log("ERROR: ");
             console.log(err);
 
